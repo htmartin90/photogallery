@@ -6,7 +6,7 @@
     <meta name="Author" content="Tyler Martin">
     <meta name="viewport" content="initial-scale=1.0, width=device-width">
     <title>TK Photography</title>
-    <link href="#" rel="stylesheet">
+    <link href="stylesheet.css" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -16,19 +16,19 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="#top">Top</a></li>
+                <li><a href="#top" class="top-sticky">Top</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section class="about">
+        <section id="about">
             <h2>About</h2>
             <p>
             Hello!<br><br>
-            I’m TK and I’m a photographer. I love looking at life through the lens of my camera. Landscape photography is my speciality and it’s taken me all over the world. 
+            I’m TK and I’m a photographer. I love looking at life through the lens of my camera. Landscape photography is my specialty and it’s taken me all over the world. 
             </p>
         </section>
-        <section>
+        <section id="gallery">
             <h2>Gallery</h2>
             <p>Here are some highlights of my work. The locations and year are in the caption</p>
             <figure>
@@ -80,10 +80,14 @@
             <figcaption>Wyoming, 2021</figcaption>
             </figure>
         </section>
-        <section class="contact">
+    </main>
+    <footer>
+        <section id="contact">
             <h2>Contact</h2>
             <p>Please fill out this form and I’ll connect with you soon.</p>
-            <form action="#" method="post">
+        </section>
+        <section class="form">
+            <form action="https://wp.zybooks.com/form-viewer.php" method="POST" target="_blank">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" placeholder="Your full name" required>
         
@@ -91,13 +95,12 @@
                 <input type="email" id="email" name="email" placeholder="Enter your email address" required>
         
                 <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" placeholder="What can I help you with?" required></textarea>
-        
-                <button type="submit">Submit</button>
+                <textarea id="message" name="message" rows="1" placeholder="WHAT CAN I HELP YOU WITH?" required></textarea>
+                <div class="submit">
+                <input type="submit" name="my-submit" id="my-submit" value="Submit">
+                </div>  
             </form>
         </section>
-    </main>
-    <footer>
         <p>Copyright 2021 TK Photography</p>
     </footer>
 </body>
