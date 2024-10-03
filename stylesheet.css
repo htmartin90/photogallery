@@ -100,11 +100,11 @@ table {
         text-transform: uppercase;
         font-weight: bold;
     }
+    a:focus{
+        border: 1px solid var(--teal);
+    }
     a:hover{
         color: var(--teal);
-    }
-    a:active{
-        border: 1px solid var(--teal);
     }
     .top-sticky {
         position: fixed;
@@ -141,22 +141,33 @@ table {
     figure {
         position: relative;
         margin: 0 auto;
+        display: inline-block;
     }
     figure img{
-        max-width: 90%; 
+         
         display: block; 
         margin: 0 auto; 
-        padding-bottom: 25px; 
+        padding-bottom: 20px; 
     }
     figure figcaption{
         position: absolute;
-        bottom: 5%;
         left: 40%;
         z-index: 1;
-        color: var(--white); 
         padding: 10px; 
         text-align: center;
         align-items: center;
+    }
+    .top{
+        top: 3%;
+    }
+    .bottom {
+        bottom: 5%;
+    }
+    .white-text {
+        color: var(--white);
+    }
+    .black-text {
+        color: var(--black);
     }
     footer  {
         background-color: var(--black);
@@ -209,7 +220,39 @@ table {
         justify-content: center; /* Centers the button horizontally */
         margin-top: 10px; /* Add some space above the container */
     }
-
 }
 /*-------------------- MEDIA QUERY (medium - 880px) --------------------------------*/
+@media screen and (min-width: 880px){
+    #photos {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0 20px;
+        margin: 0 auto;
+        padding-bottom: 0;
+    }
+    img{
+        width: 100%;
+    }
+    figure {
+        margin: 0;
+    }
+}
 /*-------------------- MEDIA QUERY (large - 1300px) ------------------------------------*/
+@media screen and (min-width: 1300px){
+    nav ul{
+        justify-content: right;
+    }
+    #photos {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 0 20px;
+        margin: 0 auto;
+        padding-bottom: 0;
+    }
+    img{
+        width: 100%;
+    }
+    figure {
+        margin: 0;
+    }
+}
